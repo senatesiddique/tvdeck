@@ -12,7 +12,6 @@ class EpisodeAdmin(admin.ModelAdmin):
 class SeasonAdmin(admin.ModelAdmin):
     fields = ['tv_show','season_number']
 
-
 admin.site.register(TVShow, TVShowAdmin)
 admin.site.register(Season, SeasonAdmin)
 admin.site.register(Episode, EpisodeAdmin)

@@ -48,10 +48,13 @@ class Season(models.Model):
 	def __str__(self): 
 		return str(self.season_number)
 
-
 class Episode(models.Model):
 	tv_show = models.ForeignKey('TVShow')
 	season = models.ForeignKey('Season')
+
+class Episode(models.Model):
+	tv_show = models.ForeignKey('TVShow')
+	season = models.IntegerField()
 	episode_number = models.IntegerField()
 	name = models.CharField(max_length=100)
 	air_date = models.DateField()
@@ -66,3 +69,4 @@ class Episode(models.Model):
 		return "e" + str(self.episode_number)
 
 	url_string = property(_get_url_string)
+		return self.name

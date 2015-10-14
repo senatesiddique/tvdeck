@@ -1,6 +1,10 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+<<<<<<< HEAD
 from tvdb.models import TVShow, Episode, Season
+=======
+from tvdb.models import TVShow, Episode
+>>>>>>> bc2c8dd9494fa602b35bb70d6d68f6e72718a84e
 
 # Create your views here.
 def index(request):
@@ -11,6 +15,7 @@ def tvshow(request, tvshow_url_string):
 	return HttpResponse("You're looking at show %s." 
 		% TVShow.objects.get(name=tv_show_name))
 
+<<<<<<< HEAD
 def season(request, tvshow_url_string, season_url_string):
 	tv_show_name = tvshow_url_string.replace("-"," ").lower().title()
 	season_number = int(season_url_string.replace("s",""))
